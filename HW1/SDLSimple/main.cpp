@@ -125,6 +125,8 @@ void Render() {
     glClear(GL_COLOR_BUFFER_BIT);
     prog.SetModelMatrix(modelMatrix);
     float vertices[]  = { -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5 };
+    float vertices2[]  = { 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1 };
+
     float texCoords[] = { 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0 };
     
     glVertexAttribPointer(prog.positionAttribute, 2, GL_FLOAT, false, 0, vertices);
@@ -138,7 +140,7 @@ void Render() {
     
     prog2.SetModelMatrix(modelMatrix2);
     
-    glVertexAttribPointer(prog2.positionAttribute, 2, GL_FLOAT, false, 0, vertices);
+    glVertexAttribPointer(prog2.positionAttribute, 2, GL_FLOAT, false, 0, vertices2);
     glEnableVertexAttribArray(prog2.positionAttribute);
     glVertexAttribPointer(prog2.texCoordAttribute, 2, GL_FLOAT, false, 0, texCoords);
     glEnableVertexAttribArray(prog2.texCoordAttribute);
