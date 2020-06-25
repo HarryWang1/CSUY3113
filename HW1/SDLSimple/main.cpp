@@ -47,6 +47,7 @@ GLuint LoadTexture(const char* filePath) {
 
 ShaderProgram prog;
 ShaderProgram prog2;
+
 void Initialize() {
     SDL_Init(SDL_INIT_VIDEO);
     displayWindow = SDL_CreateWindow("Triangle!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
